@@ -1,0 +1,242 @@
+@charset "UTF-8";
+ 
+ body{
+ 	background: #edf0f1;
+ 	padding-top: 220px;
+ }
+
+
+body, input, button{
+	font-family: 'Roboto', sans-serif;
+}
+
+.noFill {
+  fill: none;
+}
+
+header{
+	width: 100%;
+	height: 220px;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 5;
+
+	background: #25b99a; 
+	border-bottom-right-radius:30px;
+	border-bottom-left-radius:30px;
+
+
+}
+
+header input{
+	width: 90%;
+	height:70%;
+	float: left;
+	color: #fff;
+	font-size: 50px;
+	font-weight: 400;
+	text-indent:40px;
+	padding-right: 200px;
+	background: rgba(255,255,255,0.2);
+	border-radius: 20px 80px 80px 20px;
+	border:0px;
+	box-shadow: none;
+	outline: none;
+
+	box-sizing: border-box;
+
+	-webkit-appearance:none;
+	-moz-appearance:none;
+
+	}
+input{
+	margin-top: 35px;
+	margin-left: 45px;
+
+
+
+}
+
+header input::-webkit-input-placeholder{
+	color: rgba(255, 255, 255, 0.75);
+
+}
+
+header input:-moz-input-placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+header input::-moz-input-placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+header input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+header button{
+	width: 150px;
+	height:150px;
+	position: absolute;
+	top: 40px;
+	right: 60px;
+	z-index: 2;
+	border-radius: 150px;
+	background: #fff;
+	border:0px;
+	box-shadow: none;
+	outline: none;
+	cursor: pointer;
+
+
+
+	-webkit-appearance:none;
+	-moz-appearance:none;
+
+}
+
+header button svg{
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top:35%;
+	left: 35%;
+	
+}
+
+header button svg .fill{
+	fill:#25b99a;
+
+}
+
+.container{
+	width: 100%;
+	float: left;
+	padding:15px;
+}
+
+ul.todo{
+	width: 100%;
+	float: left;
+	box-sizing: border-box;
+	padding-right: 20px;
+	padding-left: 10px;
+
+}
+
+ul.todo li{
+	width: 100%;
+	height:150px;
+	min-height: 50px;
+	float:left;
+	background: #fff;
+
+	font-size: 50px;
+	font-weight: 500;
+	color: #444;
+	list-style-type: none;
+
+	box-shadow: 0px 1px 2px rgba(44,62,80,0.10) ;
+	border-radius:20px;
+	position: relative;
+
+	margin: 0 0 25px 0;
+	line-height: 3;
+	padding-left: 30px;
+	box-sizing: border-box;
+
+}
+
+ul.todo li:last-of-type{
+margin: 0;
+}
+
+ul.todo li .buttons{
+	width: 250px;
+	height: 150px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+ul.todo li .buttons button{
+	width: 125px;
+	height: 150px;
+	float: left;
+	background: none;
+	position: relative;
+	border:0px;
+	box-shadow: none;
+	outline: none;
+	cursor: pointer;
+}
+
+ul.todo li .buttons button:last-of-type:before{
+	content: '';
+	width: 2px;
+	height: 100px;
+	position: absolute;
+	top: 25px;
+	left: 0;
+	background: #edf0f1;
+
+}
+
+ul.todo li .buttons button svg{
+	width: 70px;
+	height: 70px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -33px 0 0 -33px;
+}
+ul.todo li .buttons button.complete svg {
+	border-radius: 100px; 
+	border:4px solid #25b99a;
+}
+
+ul.todo#completed li .buttons button.complete svg {
+  background: #25b99a;
+  border: 0px;
+}
+
+ul.todo#completed li .buttons button.complete svg .fill {
+  fill: #fff;
+}
+
+ul.todo li .buttons button.remove svg .fill{
+	fill: #c0cecb;
+}
+
+ul.todo li .buttons button.complete svg .fill{
+	fill: #25b99a;
+}
+
+ul.todo#completed {
+  position: relative;
+  padding: 80px 0 0 0;
+}
+
+ul.todo#completed:before {
+  content: '';
+  width: 400px;
+  height: 3px;
+  background: #d8e5e0;
+
+  position: absolute;
+  top: 30px;
+  left: 35%;
+
+  margin: 0 0 0 -75px;
+}
+
+ul.todo#todo:after,
+ul.todo#completed:after {
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color: #aaa;
+}
